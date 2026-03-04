@@ -50,7 +50,9 @@
 
   <!-- Supabase CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <!-- 순서 중요: supabase.js → game.js -->
+  <!-- config.js: 실제 키 주입 (gitignore 처리, 커밋되지 않음) -->
+  <script src="config.js"></script>
+  <!-- 순서 중요: config.js → supabase.js → game.js -->
   <script src="supabase.js"></script>
   <script src="game.js"></script>
 

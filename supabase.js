@@ -1,11 +1,9 @@
 // Created: 2026-03-04 10:00
 // Supabase 클라이언트 초기화 및 DB 함수
-
-const SUPABASE_URL = 'https://lffrvcvpabbluhnyxijm.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxmZnJ2Y3ZwYWJibHVobnl4aWptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2MTE5OTcsImV4cCI6MjA4ODE4Nzk5N30.ZXqBJZx3wMOZ9D7pR71782iKYShQgAYUkAPorhDa3UQ';
+// 실제 키는 config.js (gitignore 처리)에서 window 전역으로 주입됩니다.
 
 const { createClient } = supabase;
-const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const db = createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
 
 /**
  * 점수를 Supabase에 저장
