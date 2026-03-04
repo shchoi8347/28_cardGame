@@ -1,0 +1,58 @@
+<!-- Created: 2026-03-04 10:00 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>카드 짝 맞추기 🃏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🃏 카드 짝 맞추기</h1>
+  </header>
+
+  <!-- 컨트롤 영역 -->
+  <div class="controls">
+    <input
+      type="text"
+      id="player-name"
+      placeholder="닉네임 입력"
+      maxlength="12"
+    />
+
+    <div class="stat">
+      <span class="stat-label">이동</span>
+      <span class="stat-value" id="moves">0</span>
+    </div>
+
+    <div class="stat">
+      <span class="stat-label">시간</span>
+      <span class="stat-value" id="timer">00:00</span>
+    </div>
+
+    <button class="btn-restart" id="restart-btn">↺ 재시작</button>
+  </div>
+
+  <!-- 카드 그리드 -->
+  <main id="card-grid"></main>
+
+  <!-- 결과 모달 -->
+  <div class="modal-overlay hidden" id="result-modal">
+    <div class="modal-box">
+      <h2>게임 결과</h2>
+      <div id="modal-result"></div>
+      <div id="modal-leaderboard"></div>
+      <button class="btn-close" id="modal-close">다시 하기</button>
+    </div>
+  </div>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- 순서 중요: supabase.js → game.js -->
+  <script src="supabase.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>
